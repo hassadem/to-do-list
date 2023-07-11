@@ -18,7 +18,17 @@ function addTask() {
     listItem.remove();
   });
 
+  const editButton = document.createElement('button');
+  editButton.innerText = 'Edit';
+
+  // Add event listener to edit the task when the button is clicked
+  editButton.addEventListener('click', function() {
+    const newText = prompt('Enter new task text');
+    taskSpan.innerText = newText;
+  });
+
   listItem.appendChild(taskSpan);
+  listItem.appendChild(editButton);
   listItem.appendChild(removeButton);
 
   taskList.appendChild(listItem);
