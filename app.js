@@ -23,7 +23,7 @@ function addTask() {
 
   // Add event listener to edit the task when the button is clicked
   editButton.addEventListener('click', function() {
-    const newText = prompt('Enter new task text');
+    const newText = prompt('Edit the task');
     taskSpan.innerText = newText;
   });
 
